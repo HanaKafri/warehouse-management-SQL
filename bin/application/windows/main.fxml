@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1130.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.System_Code">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="525.0" layoutY="96.0" prefHeight="30.0" prefWidth="106.0" text="Welcome" textAlignment="CENTER">
+         <font>
+            <Font name="Bold Italic Art" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="453.0" layoutY="63.0" text="شركة صمت للمواد الغذائية">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="94.0" layoutY="320.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Please choose a table to open">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="chooseTable" mnemonicParsing="false" text="Tables" textAlignment="CENTER">
+               <items>
+               	  <MenuItem mnemonicParsing="false" onAction="#openCompany" text="Company" />
+                  <MenuItem mnemonicParsing="false" onAction="#openShippingCompany" text="Shipping Company" />
+                  <MenuItem mnemonicParsing="false" onAction="#openBrand" text="Brand" />
+                  <MenuItem mnemonicParsing="false" onAction="#openCustomer" text="Customer" />
+                  <MenuItem mnemonicParsing="false" onAction="#openBatch" text="Batch" />
+                  <MenuItem mnemonicParsing="false" onAction="#openPackagingType" text="PackagingType" />
+                  <MenuItem mnemonicParsing="false" onAction="#openMeasurementUnit" text="Measurement Unit" />
+                  <MenuItem mnemonicParsing="false" onAction="#openHealthPermit" text="Health Permit" />
+                  <MenuItem mnemonicParsing="false" onAction="#openProduct" text="Product" />
+                  <MenuItem mnemonicParsing="false" onAction="#openSales" text="Sales" />
+                  <MenuItem mnemonicParsing="false" onAction="#openBatchContent" text="Batch Content" />                  
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <HBox layoutX="240.0" layoutY="536.0" prefWidth="553.0" spacing="100.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/sutas_logo.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/lavi_logo.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/peyman_logo.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/Yoga_logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ImageView fitHeight="94.0" fitWidth="125.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/Logo.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

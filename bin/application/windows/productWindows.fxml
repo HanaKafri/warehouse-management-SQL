@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1130.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.System_Code">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="513.0" layoutY="56.0" prefHeight="31.0" prefWidth="107.0" text="product">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <HBox layoutX="26.0" layoutY="133.0" prefHeight="222.0" prefWidth="1082.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+               
+               	
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="product id " />
+                  <ListView fx:id="prIDListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="product name" />
+                  <ListView fx:id="prNameListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="90.0" text="brand name" />
+                  <ListView fx:id="prBatchNameListView" prefHeight="206.0" prefWidth="82.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="Barcode" />
+                  <ListView fx:id="prBarcodeListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="Descreption" />
+                  <ListView fx:id="prDescListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="93.0" text="product size" />
+                  <ListView fx:id="prSizeListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="97.0" text="Num. of units" />
+                  <ListView fx:id="prUnitsListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="HS code" />
+                  <ListView fx:id="prHSCodeListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="TAX" />
+                  <ListView fx:id="prtaxListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="97.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="measurment unit" />
+                  <ListView fx:id="mNameListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="89.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="pakaging type" />
+                  <ListView fx:id="paNameListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="83.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="H. issue date" />
+                  <ListView fx:id="hIssueDateListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="77.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="H. expire date" />
+                  <ListView fx:id="hExpireDateListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <GridPane layoutX="298.0" layoutY="596.0" prefHeight="70.0" prefWidth="118.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.39996337890625" minWidth="10.0" prefWidth="54.800073242187494" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.39999389648438" minWidth="10.0" prefWidth="59.5999267578125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="56.80003662109375" minHeight="10.0" prefHeight="33.39998779296875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="43.9999755859375" minHeight="5.599963378906246" prefHeight="35.20001220703124" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="DeleteBtn" mnemonicParsing="false" onAction="#productDeleteFunc" text="Delete" />
+            <Button fx:id="UpdateBtn" mnemonicParsing="false" onAction="#productUpdateFunc" text="Update" GridPane.columnIndex="1" />
+            <Button fx:id="InsertBtn" mnemonicParsing="false" onAction="#productInsertFunc" prefHeight="26.0" prefWidth="54.0" text="Insert" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="SelectBtn" mnemonicParsing="false" onAction="#productSelectFunc" prefHeight="26.0" prefWidth="52.0" text="Select" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="26.0" layoutY="393.0" prefHeight="18.0" prefWidth="162.0" text="Please insert data here:" />
+      <Label layoutX="26.0" layoutY="369.0" text="Please press Slecet first." />
+  	  <Label fx:id="errorLabel" layoutX="24.0" layoutY="619.0" prefHeight="22.0" prefWidth="311.0" text="..." />
+      
+      <MenuButton fx:id="chooseTable" layoutX="872.0" layoutY="631.0" mnemonicParsing="false" text="Tables">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#openCompany" text="Company" />
+           <MenuItem mnemonicParsing="false" onAction="#openShippingCompany" text="Shipping Company" />
+           <MenuItem mnemonicParsing="false" onAction="#openBrand" text="Brand" />
+           <MenuItem mnemonicParsing="false" onAction="#openCustomer" text="Customer" />
+           <MenuItem mnemonicParsing="false" onAction="#openBatch" text="Batch" />
+           <MenuItem mnemonicParsing="false" onAction="#openPackagingType" text="PackagingType" />
+           <MenuItem mnemonicParsing="false" onAction="#openMeasurementUnit" text="Measurement Unit" />
+           <MenuItem mnemonicParsing="false" onAction="#openHealthPermit" text="Health Permit" />
+           <MenuItem mnemonicParsing="false" onAction="#openSales" text="Sales" />
+           <MenuItem mnemonicParsing="false" onAction="#openBatchContent" text="Batch Content" />
+         </items>
+      </MenuButton>
+      <ImageView fitHeight="94.0" fitWidth="125.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.jpeg" />
+         </image>
+      </ImageView>
+      <GridPane hgap="3.0" layoutX="24.0" layoutY="421.0" prefHeight="94.0" prefWidth="297.0" vgap="3.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="productNametxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="product name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="productDescriptiontxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="description" GridPane.rowIndex="2" />
+            <TextField fx:id="productSizetxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="size" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="productNumperOfUnitstxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="number of units" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="productHSCodetxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="hs code" GridPane.rowIndex="3" />
+            <TextField fx:id="productTaxtxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="custom tax" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="productBarCodetxt" alignment="CENTER" prefHeight="26.0" prefWidth="78.0" promptText="bar code" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="proIDBox" prefWidth="150.0" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="99.0" text="Product ID" />
+         </children>
+      </GridPane>
+      <HBox layoutX="687.0" layoutY="393.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="107.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="brand" />
+                  <ListView fx:id="bnameListView" prefHeight="200.0" prefWidth="108.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="measurement unit" />
+                  <ListView fx:id="prMunameListView" prefHeight="200.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="pakaging type" />
+                  <ListView fx:id="prPanameListView" prefHeight="200.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="107.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="health permit" />
+                  <ListView fx:id="prHIDListView" prefHeight="200.0" prefWidth="108.0" />
+               </children>
+               
+               
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fitHeight="94.0" fitWidth="125.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/Logo.jpeg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="29.0" layoutY="533.0" prefHeight="85.0" prefWidth="239.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ChoiceBox fx:id="proBrandBox" prefWidth="150.0" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="proMUnitBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="proPTypeBox" prefWidth="150.0" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="proHpremitBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="124.0" text="Brand name:" />
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="126.0" text="Measurement unit:" GridPane.columnIndex="1" />
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="141.0" text="Packaging type:" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="128.0" text="Health permit" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      
+      
+   </children>
+</AnchorPane>

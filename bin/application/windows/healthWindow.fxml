@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1130.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.System_Code">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="513.0" layoutY="54.0" prefHeight="31.0" text="Health Permit">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <HBox layoutX="356.0" layoutY="138.0" prefHeight="220.0" prefWidth="417.0">
+         <children>
+            <VBox prefHeight="222.0" prefWidth="23.0" />
+            <VBox prefHeight="220.0" prefWidth="108.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="97.0" text="ID" />
+                  <ListView fx:id="hIDListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="220.0" prefWidth="125.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="127.0" text="Date of Issue" />
+                  <ListView fx:id="hIssueDateListView" prefHeight="206.0" prefWidth="82.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="220.0" prefWidth="134.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="137.0" text="Expire Date" />
+                  <ListView fx:id="hExpireDateListView" prefHeight="205.0" prefWidth="126.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <GridPane layoutX="203.0" layoutY="518.0" prefHeight="69.0" prefWidth="134.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.39996337890625" minWidth="10.0" prefWidth="54.800073242187494" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.39999389648438" minWidth="10.0" prefWidth="59.5999267578125" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="56.80003662109375" minHeight="10.0" prefHeight="20.80003662109375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.9999755859375" minHeight="5.599963378906246" prefHeight="41.59996337890625" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="DeleteBtn" mnemonicParsing="false" onAction="#healthPermitDeleteFunc" text="Delete" />
+            <Button fx:id="UpdateBtn" mnemonicParsing="false" onAction="#healthPermitUpdateFunc" text="Update" GridPane.columnIndex="1" />
+            <Button fx:id="InsertBtn" mnemonicParsing="false" onAction="#healthPermitInsertFunc" prefHeight="26.0" prefWidth="54.0" text="Insert" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="SelectBtn" mnemonicParsing="false" onAction="#healthPermitSelectFunc" prefHeight="26.0" prefWidth="52.0" text="Select" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="108.0" layoutY="389.0" prefHeight="18.0" prefWidth="162.0" text="Please insert data here:" />
+      <Label fx:id="errorLabel" layoutX="108.0" layoutY="479.0" prefHeight="18.0" prefWidth="348.0" text="..." />
+      <MenuButton fx:id="chooseTable" layoutX="874.0" layoutY="512.0" mnemonicParsing="false" text="Tables">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#openCompany" text="Company" />
+           <MenuItem mnemonicParsing="false" onAction="#openShippingCompany" text="Shipping Company" />
+           <MenuItem mnemonicParsing="false" onAction="#openBrand" text="Brand" />
+           <MenuItem mnemonicParsing="false" onAction="#openCustomer" text="Customer" />
+           <MenuItem mnemonicParsing="false" onAction="#openBatch" text="Batch" />
+           <MenuItem mnemonicParsing="false" onAction="#openPackagingType" text="PackagingType" />
+           <MenuItem mnemonicParsing="false" onAction="#openMeasurementUnit" text="Measurement Unit" />
+           <MenuItem mnemonicParsing="false" onAction="#openProduct" text="Product" />
+           <MenuItem mnemonicParsing="false" onAction="#openSales" text="Sales" />
+           <MenuItem mnemonicParsing="false" onAction="#openBatchContent" text="Batch Content" />
+         </items>
+      </MenuButton>
+      <GridPane hgap="3.0" layoutX="108.0" layoutY="437.0" prefHeight="31.0" prefWidth="365.0" vgap="3.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="29.60001220703125" minHeight="10.0" prefHeight="29.60001220703125" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="healthPermitIDtxt" alignment="CENTER" prefHeight="26.0" prefWidth="70.0" promptText="ID" />
+            <TextField fx:id="healthPermitExpireDatetxt" alignment="CENTER" prefHeight="26.0" prefWidth="105.0" promptText="Expire Date" GridPane.columnIndex="2" />
+            <TextField fx:id="healthPermitIssueDatetxt" alignment="CENTER" prefHeight="26.0" prefWidth="105.0" promptText="Date of Issue" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="108.0" layoutY="407.0" text="Note: Enter the ID of the data you want to delete or update (+ only fill the data you want to update)" />
+      <ImageView fitHeight="94.0" fitWidth="125.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/Logo.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
